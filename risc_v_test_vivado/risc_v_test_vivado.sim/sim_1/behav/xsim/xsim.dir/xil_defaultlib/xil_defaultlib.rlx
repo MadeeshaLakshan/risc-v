@@ -1,0 +1,14 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+D:/cpu design/risc-v/addr.sv,1720375874,systemVerilog,,D:/cpu design/risc-v/alu.sv,,addr,,,,,,,,
+D:/cpu design/risc-v/alu.sv,1720375791,systemVerilog,,D:/cpu design/risc-v/data_path.sv,,alu,,,,,,,,
+D:/cpu design/risc-v/data_path.sv,1720370494,systemVerilog,,D:/cpu design/risc-v/flopr.sv,,data_path,,,,,,,,
+D:/cpu design/risc-v/datapath_tb.sv,1720377852,systemVerilog,,,,data_path_tb,,,,,,,,
+D:/cpu design/risc-v/flopr.sv,1720348407,systemVerilog,,D:/cpu design/risc-v/immext.sv,,flopr,,,,,,,,
+D:/cpu design/risc-v/immext.sv,1720346127,systemVerilog,,D:/cpu design/risc-v/mux2.sv,,immext,,,,,,,,
+D:/cpu design/risc-v/mux2.sv,1720337802,systemVerilog,,D:/cpu design/risc-v/mux3.sv,,mux2,,,,,,,,
+D:/cpu design/risc-v/mux3.sv,1720338056,systemVerilog,,D:/cpu design/risc-v/regfile.sv,,mux3,,,,,,,,
+D:/cpu design/risc-v/regfile.sv,1720374883,systemVerilog,,D:/cpu design/risc-v/datapath_tb.sv,,regfile,,,,,,,,
+D:/cpu design/risc-v/risc_v_test_vivado/risc_v_test_vivado.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,

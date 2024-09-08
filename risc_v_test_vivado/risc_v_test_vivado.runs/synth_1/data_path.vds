@@ -1,0 +1,346 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Sep  4 10:17:35 2024
+# Process ID: 11936
+# Current directory: D:/cpu design/risc-v/risc_v_test_vivado/risc_v_test_vivado.runs/synth_1
+# Command line: vivado.exe -log data_path.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source data_path.tcl
+# Log file: D:/cpu design/risc-v/risc_v_test_vivado/risc_v_test_vivado.runs/synth_1/data_path.vds
+# Journal file: D:/cpu design/risc-v/risc_v_test_vivado/risc_v_test_vivado.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source data_path.tcl -notrace
+Command: synth_design -top data_path -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 17816 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 409.562 ; gain = 97.207
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'data_path' [D:/cpu design/risc-v/data_path.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [D:/cpu design/risc-v/regfile.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (1#1) [D:/cpu design/risc-v/regfile.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'immext' [D:/cpu design/risc-v/immext.sv:1]
+INFO: [Synth 8-226] default block is never used [D:/cpu design/risc-v/immext.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'immext' (2#1) [D:/cpu design/risc-v/immext.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [D:/cpu design/risc-v/mux2.sv:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (3#1) [D:/cpu design/risc-v/mux2.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [D:/cpu design/risc-v/alu.sv:1]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [D:/cpu design/risc-v/alu.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (4#1) [D:/cpu design/risc-v/alu.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'mux3' [D:/cpu design/risc-v/mux3.sv:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mux3' (5#1) [D:/cpu design/risc-v/mux3.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'flopr' [D:/cpu design/risc-v/flopr.sv:1]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'flopr' (6#1) [D:/cpu design/risc-v/flopr.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'addr' [D:/cpu design/risc-v/addr.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'addr' (7#1) [D:/cpu design/risc-v/addr.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'data_path' (8#1) [D:/cpu design/risc-v/data_path.sv:1]
+WARNING: [Synth 8-3331] design immext has unconnected port instr[6]
+WARNING: [Synth 8-3331] design immext has unconnected port instr[5]
+WARNING: [Synth 8-3331] design immext has unconnected port instr[4]
+WARNING: [Synth 8-3331] design immext has unconnected port instr[3]
+WARNING: [Synth 8-3331] design immext has unconnected port instr[2]
+WARNING: [Synth 8-3331] design immext has unconnected port instr[1]
+WARNING: [Synth 8-3331] design immext has unconnected port instr[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 464.520 ; gain = 152.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 464.520 ; gain = 152.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1157-1
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 464.520 ; gain = 152.164
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/cpu design/risc-v/alu.sv:8]
+INFO: [Synth 8-5545] ROM "zero" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 464.520 ; gain = 152.164
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 3     
+	   5 Input     32 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module regfile 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module immext 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module mux2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module alu 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	   5 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+Module mux3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module flopr 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module addr 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "alu/zero" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design data_path has unconnected port instr[6]
+WARNING: [Synth 8-3331] design data_path has unconnected port instr[5]
+WARNING: [Synth 8-3331] design data_path has unconnected port instr[4]
+WARNING: [Synth 8-3331] design data_path has unconnected port instr[3]
+WARNING: [Synth 8-3331] design data_path has unconnected port instr[2]
+WARNING: [Synth 8-3331] design data_path has unconnected port instr[1]
+WARNING: [Synth 8-3331] design data_path has unconnected port instr[0]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:01:12 . Memory (MB): peak = 807.930 ; gain = 495.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+-------------------+-----------+----------------------+---------------+
+|Module Name | RTL Object        | Inference | Size (Depth x Width) | Primitives    | 
++------------+-------------------+-----------+----------------------+---------------+
+|data_path   | reigster/regf_reg | Implied   | 32 x 32              | RAM32M x 12   | 
++------------+-------------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:01:12 . Memory (MB): peak = 807.930 ; gain = 495.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++------------+-------------------+-----------+----------------------+---------------+
+|Module Name | RTL Object        | Inference | Size (Depth x Width) | Primitives    | 
++------------+-------------------+-----------+----------------------+---------------+
+|data_path   | reigster/regf_reg | Implied   | 32 x 32              | RAM32M x 12   | 
++------------+-------------------+-----------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:53 ; elapsed = 00:01:13 . Memory (MB): peak = 807.930 ; gain = 495.574
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:01:16 . Memory (MB): peak = 807.930 ; gain = 495.574
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:01:16 . Memory (MB): peak = 807.930 ; gain = 495.574
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:01:16 . Memory (MB): peak = 807.930 ; gain = 495.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:01:16 . Memory (MB): peak = 807.930 ; gain = 495.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:01:16 . Memory (MB): peak = 807.930 ; gain = 495.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:01:16 . Memory (MB): peak = 807.930 ; gain = 495.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    32|
+|3     |LUT1   |     3|
+|4     |LUT2   |    35|
+|5     |LUT3   |    35|
+|6     |LUT4   |    43|
+|7     |LUT5   |    68|
+|8     |LUT6   |    61|
+|9     |RAM32M |    12|
+|10    |FDCE   |    32|
+|11    |IBUF   |    69|
+|12    |OBUF   |    97|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------+--------+------+
+|      |Instance      |Module  |Cells |
++------+--------------+--------+------+
+|1     |top           |        |   488|
+|2     |  alu         |alu     |    26|
+|3     |  pcadd4      |addr    |     8|
+|4     |  pcaddbranch |addr_0  |    24|
+|5     |  pcreg       |flopr   |    91|
+|6     |  reigster    |regfile |   172|
++------+--------------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:01:16 . Memory (MB): peak = 807.930 ; gain = 495.574
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:56 ; elapsed = 00:01:16 . Memory (MB): peak = 807.930 ; gain = 495.574
+Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:01:16 . Memory (MB): peak = 807.930 ; gain = 495.574
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 113 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 12 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:09 ; elapsed = 00:01:34 . Memory (MB): peak = 890.832 ; gain = 591.309
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'D:/cpu design/risc-v/risc_v_test_vivado/risc_v_test_vivado.runs/synth_1/data_path.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file data_path_utilization_synth.rpt -pb data_path_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.969 . Memory (MB): peak = 890.832 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Sep  4 10:19:16 2024...
